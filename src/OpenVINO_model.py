@@ -2,7 +2,6 @@ from ultralytics import YOLO
 import cv2 as cv
 import os
 
-
 import helper
 
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
