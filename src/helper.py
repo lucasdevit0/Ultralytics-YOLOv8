@@ -58,10 +58,3 @@ def bbox_class_id_label(x1,y1,x2,y2,frame, class_id):
         color = (0,0,0), 
         thickness = 1, 
         lineType = cv.LINE_AA)
-    
-def record(frame, output_path, file_name, raw_video):
-    frame_width, frame_height = int(raw_video.get(3)), int(raw_video.get(4))
-    size = (frame_width, frame_height)
-    cap_out = cv.VideoWriter('{}/{}.mp4'.format(output_path, file_name), cv.VideoWriter_fourcc('m','p','4','v'),raw_video.get(cv.CAP_PROP_FPS), size)
-    cap_out.write(frame)
-    return cap_out
